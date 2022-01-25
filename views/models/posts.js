@@ -1,11 +1,19 @@
 const express = require('express');
 
-const post = ({
-    'title': 'First post',
-    'content': 'This is the first post'
+let post = [ ({
+    title: 'post1',
+    content: 'post1 content',
+},
+ {
+    title: 'post2',
+    content: 'post2 content',
+ },
+ {
+    title: 'post3',
+    
+ }
 
-});
-
+)]
 
 
 
