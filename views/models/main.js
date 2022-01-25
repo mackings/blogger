@@ -1,9 +1,9 @@
 const express = require('express');
-const dotenv = require('dotenv').config();
 const app = express();
 const router = express.Router();
 const path = require('path');
-const myusers = require('./users');
+const dotenv = require('dotenv').config();
+const posts = require('./posts');
 
 
 
@@ -20,14 +20,15 @@ app.get('/', function(req, res) {
 
 app.post('/blog' , function(req,res){
 
-     var title = req.body.title;
-    var content = req.body.text;
-    console.log(title);
-    console.log(content);
+    var postname = req.body.title;
+    var postcontent = req.body.content;
+    var author = req.body.author;
 
+    console.log('postname: ' + postname + ' postcontent: ' + postcontent + ' author: ' + author);
 
-    res.send('post sent by ' + title + ' ' + content);
-    
+    res.send('postname: ' + postname + ' postcontent: ' + postcontent + ' author: ' + author);
+
+     
 
 
 });
